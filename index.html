@@ -9,6 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            VANTA.TRUNK({
+                el: "#trunk",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                color: '#ff4500',
+                backgroundColor: '#09090b',
+                spacing: 5.00,
+                chaos: 5.00
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="layout">
@@ -29,7 +49,8 @@
         </header>
 
         <main>
-            <section class="hero-section">
+            <!-- Hero Section -->
+            <section class="hero-section" id="trunk">
                 <div class="container">
                     <div class="hero-content">
                         <h1>Technology Without Limits</h1>
@@ -41,22 +62,17 @@
                 </div>
             </section>
 
+            <!-- About Section -->
             <section id="about" class="about-section">
                 <div class="container">
                     <h2>About Us</h2>
                     <p>
                         We are a technology organization focused on building innovative software solutions that solve real-world challenges. Our aim is to create high-quality tools and applications that streamline operations, enhance user experiences, and push the boundaries of what technology can achieve.
                     </p>
-                    <!-- <a href="/about" class="link-with-arrow">
-                        Read More
-                        <svg class="arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a> -->
                 </div>
             </section>
 
+            <!-- Platforms Section -->
             <section id="platforms" class="platforms-section">
                 <div class="container">
                     <h2>Our Platforms</h2>
@@ -66,21 +82,12 @@
                             <p>
                                 Clermont is our flagship platform—an advanced supply chain tracker designed to provide real-time insights and data for logistics management.
                             </p>
-                            <!-- <a href="/platforms/clermont" class="button primary">Learn More</a> -->
                             <button class="button secondary" disabled>Coming Soon</button>
                         </div>
-                        <!-- <div class="platform-card">
-                            <h3>Emery</h3>
-                            <p>
-                                Emery is an open-source tool designed to track space debris and monitor the evolving space environment.
-                            </p>
-                            <button class="button secondary" disabled>Coming Soon</button>
-                        </div> -->
                         <div class="platform-card">
                             <h3>Future Projects</h3>
                             <p>
-                                We're constantly innovating and developing new platforms to meet the evolving needs of the tech
-                                industry.
+                                We're constantly innovating and developing new platforms to meet the evolving needs of the tech industry.
                             </p>
                             <button class="button secondary" disabled>Coming Soon</button>
                         </div>
@@ -88,6 +95,7 @@
                 </div>
             </section>
 
+            <!-- Contact Section -->
             <section id="contact" class="contact-section">
                 <div class="container">
                     <h2>Contact Us</h2>
@@ -109,6 +117,7 @@
             </div>
         </footer>
     </div>
+
     <script src="main.js"></script>
 </body>
 </html>
