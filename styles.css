@@ -190,7 +190,7 @@ h1 {
 
 .hero-text {
     max-width: 700px;
-    color: var(--muted-foreground);
+    color: var(--secondary-foreground);
 }
 
 @media (min-width: 768px) {
